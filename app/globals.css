@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  --background: #090909;
+  --foreground: #f2f0eb;
+  --muted: #777775;
+  --muted-bright: #a3a3a0;
+  --line: #242424;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-geist-mono);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--background); color-scheme: dark; }
+
+body {
+  min-width: 320px;
+  min-height: 100svh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-mono), "SFMono-Regular", Consolas, monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: #d8d6d0; color: #090909; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 1px solid #d8d6d0; outline-offset: 5px; }
+
+.terminal-frame {
+  width: min(100%, 52rem);
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: clamp(2rem, 8vh, 6rem) clamp(1.25rem, 5vw, 3rem) 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-main { margin-top: clamp(5rem, 15vh, 9rem); }
+
+.terminal-prompt {
+  display: flex;
+  min-width: 0;
+  color: var(--muted-bright);
+  white-space: nowrap;
+}
+
+.prompt-user { color: var(--foreground); }
+
+.typed-command {
+  display: inline-block;
+  width: 0;
+  max-width: max-content;
+  margin-left: 0.65rem;
+  overflow: hidden;
+  color: var(--foreground);
+  white-space: nowrap;
+  animation: terminal-type 320ms steps(6, end) 80ms forwards;
+}
+
+.intro-reveal {
+  opacity: 0;
+  transform: translateY(7px);
+  animation: terminal-reveal 220ms ease-out forwards;
+}
+
+.intro-name { animation-delay: 410ms; }
+.intro-role { animation-delay: 520ms; }
+.menu-entry:nth-child(1) { animation-delay: 650ms; }
+.menu-entry:nth-child(2) { animation-delay: 750ms; }
+.menu-entry:nth-child(3) { animation-delay: 850ms; }
+.menu-entry:nth-child(4) { animation-delay: 950ms; }
+.menu-entry:nth-child(5) { animation-delay: 1050ms; }
+.intro-ready { animation-delay: 1150ms; }
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.62em;
+  height: 1.12em;
+  margin-left: 0.45rem;
+  translate: 0 0.18em;
+  background: currentColor;
+  animation: cursor-blink 1s step-end infinite;
+}
+
+.terminal-link { transition: color 170ms ease, transform 170ms ease; }
+.terminal-link:hover, .terminal-link:focus-visible { color: var(--foreground); transform: translateX(3px); }
+
+.project-row {
+  display: grid;
+  grid-template-columns: 2.7rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.project-row:last-child { border-bottom: 1px solid var(--line); }
+.project-number { color: var(--muted); }
+.project-description { margin-top: 0.15rem; color: var(--muted); font-size: 0.875rem; }
+
+.system-meta {
+  margin-top: auto;
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #555553;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 0.42rem;
+  height: 0.42rem;
+  margin-right: 0.45rem;
+  border-radius: 50%;
+  background: #777775;
+}
+
+@keyframes terminal-type { from { width: 0; } to { width: 6ch; } }
+@keyframes terminal-reveal { to { opacity: 1; transform: translateY(0); } }
+@keyframes cursor-blink { 0%, 45% { opacity: 1; } 46%, 100% { opacity: 0; } }
+
+@media (max-width: 640px) {
+  body { font-size: 0.9375rem; }
+  .terminal-frame { padding-top: 1.5rem; }
+  .terminal-main { margin-top: clamp(4.5rem, 13vh, 7rem); }
+  .terminal-prompt { font-size: 0.8125rem; }
+  .system-meta { align-items: flex-start; flex-direction: column; gap: 0.2rem; }
+  .project-row { grid-template-columns: 2.3rem minmax(0, 1fr); gap: 0.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .typed-command { width: 6ch; }
+  .intro-reveal { opacity: 1; transform: none; }
+}
