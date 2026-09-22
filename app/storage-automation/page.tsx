@@ -19,7 +19,7 @@ export default function StorageAutomationPage() {
     <SectionShell path="storage-automation">
       <article className="storage-project">
         <header className="storage-intro">
-          <p className="storage-kicker"><i /> 04 / DEPLOYED AUTOMATION</p>
+          <p className="storage-kicker"><i /> 03 / DEPLOYED AUTOMATION</p>
           <h1>STORAGE<br />AUTOMATION</h1>
           <p>{storageOverview}</p>
           <div className="storage-status-line">
@@ -28,6 +28,14 @@ export default function StorageAutomationPage() {
             <span>VPN / GLUETUN + AIRVPN</span>
             <span>MODE / FAIL-CLOSED</span>
           </div>
+          <a
+            className="storage-repo-link"
+            href="https://github.com/tilemachoscfu/storage-automation"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span aria-hidden="true">↗</span> view source on github
+          </a>
         </header>
 
         <section className="storage-section" aria-labelledby="storage-flow">

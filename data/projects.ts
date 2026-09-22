@@ -51,7 +51,10 @@ export const projects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Python", "Gluetun / AirVPN", "media services"],
-    links: [{ label: "details", href: "/storage-automation" }],
+    links: [
+      { label: "details", href: "/storage-automation" },
+      { label: "github", href: "https://github.com/tilemachoscfu/storage-automation" },
+    ],
   },
 ] as const;
 
@@ -84,7 +87,10 @@ export const codeProjects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Python", "Gluetun / AirVPN", "Jellyfin"],
-    links: [{ label: "details", href: "/storage-automation" }],
+    links: [
+      { label: "details", href: "/storage-automation" },
+      { label: "github", href: "https://github.com/tilemachoscfu/storage-automation" },
+    ],
   },
   {
     slug: "hardening-toolkit",
