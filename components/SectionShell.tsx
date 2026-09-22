@@ -3,14 +3,7 @@ import type { ReactNode } from "react";
 import { PageTransition } from "./PageTransition";
 import { TerminalCursor } from "./TerminalCursor";
 import { TerminalPrompt } from "./TerminalPrompt";
-
-const sectionLinks = [
-  ["projects", "/projects"],
-  ["prints", "/3d-printing"],
-  ["homelab", "/homelab"],
-  ["code", "/code"],
-  ["about", "/about"],
-] as const;
+import { navigationItems } from "@/data/navigation";
 
 export function SectionShell({ path, children }: { path: string; children: ReactNode }) {
   return (
@@ -18,8 +11,15 @@ export function SectionShell({ path, children }: { path: string; children: React
       <header className="section-header">
         <Link href="/" className="section-brand">NIGHTCRAWLER</Link>
         <nav aria-label="Sections">
-          {sectionLinks.map(([label, href]) => (
-            <Link key={href} href={href} className="terminal-link">{label}</Link>
+          {navigationItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="section-nav-link terminal-link"
+              aria-current={item.href === `/${path}` ? "page" : undefined}
+            >
+              <span>{item.index}</span>{item.shortLabel}
+            </Link>
           ))}
         </nav>
       </header>
