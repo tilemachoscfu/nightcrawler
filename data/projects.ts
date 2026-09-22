@@ -51,6 +51,7 @@ export const projects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Python", "Arr stack", "media services"],
+    links: [{ label: "details", href: "/storage-automation" }],
   },
 ] as const;
 
@@ -83,6 +84,7 @@ export const codeProjects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Python", "Arr stack", "Jellyfin"],
+    links: [{ label: "details", href: "/storage-automation" }],
   },
   {
     slug: "hardening-toolkit",
