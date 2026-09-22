@@ -390,9 +390,38 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-prompt { margin-top: clamp(4rem, 10vw, 7rem); }
 .section-content { margin-top: clamp(3rem, 7vw, 5rem); }
 .project-list { margin-top: 1.5rem; }
-.print-hero { width: min(100%, 36rem); margin-bottom: 2.5rem; }
-.print-hero img { display: block; width: 100%; height: auto; border: 1px solid var(--line); filter: saturate(0.7) contrast(1.04); }
-.print-hero figcaption { margin-top: 0.7rem; color: #666663; font-size: 0.6875rem; letter-spacing: 0.1em; }
+.print-project { max-width: 64rem; }
+.print-project-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(17rem, 0.92fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
+.print-visual { position: relative; margin: 0; padding: 0.45rem; overflow: hidden; background: #080608; border: 1px solid #2c1b23; box-shadow: inset 0 0 0 1px rgba(255, 16, 101, 0.05); }
+.print-visual::before,
+.print-visual::after { position: absolute; z-index: 3; width: 1.2rem; height: 1.2rem; content: ""; pointer-events: none; }
+.print-visual::before { top: 0.2rem; left: 0.2rem; border-top: 1px solid var(--accent); border-left: 1px solid var(--accent); }
+.print-visual::after { right: 0.2rem; bottom: 1.95rem; border-right: 1px solid var(--accent); border-bottom: 1px solid var(--accent); }
+.print-visual img { display: block; width: 100%; height: auto; filter: grayscale(0.42) saturate(0.55) contrast(1.14) brightness(0.72); }
+.print-visual-overlay { position: absolute; inset: 0.45rem 0.45rem 2.15rem; z-index: 1; background: rgba(255, 10, 100, 0.085); mix-blend-mode: screen; pointer-events: none; }
+.print-visual-label { position: absolute; z-index: 2; padding: 0.28rem 0.45rem; background: rgba(6, 5, 6, 0.82); color: #c8bdc1; font-size: 0.6875rem; letter-spacing: 0.08em; }
+.print-visual-label-top { top: 1rem; left: 1rem; }
+.print-visual-label-bottom { right: 1rem; bottom: 3rem; }
+.print-visual-label i { display: inline-block; width: 0.42rem; height: 0.42rem; margin-right: 0.4rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0.6rem rgba(255, 10, 100, 0.75); animation: signal-blink 1.3s steps(2, end) infinite; }
+.print-visual figcaption { padding: 0.65rem 0.25rem 0.2rem; color: #665d61; font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.print-copy { padding-top: 0.25rem; }
+.print-kicker { color: var(--accent-soft); font-size: 0.75rem; letter-spacing: 0.1em; }
+.print-copy h1 { margin-top: 1.1rem; color: var(--foreground); font-size: clamp(2rem, 4.4vw, 3.7rem); font-weight: 720; line-height: 0.95; letter-spacing: -0.055em; }
+.print-overview { margin-top: 1.7rem; color: var(--muted-bright); font-size: 1rem; line-height: 1.75; }
+.print-specs { margin-top: 2rem; border-top: 1px solid var(--line); }
+.print-specs > div { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
+.print-specs dt { color: #665d61; font-size: 0.75rem; letter-spacing: 0.08em; }
+.print-specs dd { color: var(--muted-bright); font-size: 0.8125rem; }
+.print-credit { margin-top: 1.5rem; color: #665d61; font-size: 0.75rem; text-transform: uppercase; }
+.print-source-link { display: inline-flex; gap: 0.6rem; margin-top: 0.9rem; color: var(--accent-soft); font-size: 0.8125rem; transition: color 160ms ease, transform 160ms ease; }
+.print-source-link span { color: var(--accent); }
+.print-source-link:hover,
+.print-source-link:focus-visible { color: var(--foreground); transform: translateX(3px); }
+.print-features { margin-top: clamp(4rem, 8vw, 6rem); }
+.print-features h2 { margin-bottom: 1rem; color: #665d61; font-size: 0.75rem; letter-spacing: 0.1em; }
+.print-features ul { border-top: 1px solid var(--line); }
+.print-features li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); color: var(--muted-bright); font-size: 0.9375rem; }
+.print-features li span { color: #665d61; font-size: 0.75rem; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 0.7rem 1.25rem; }
 .filter-command { min-height: 2rem; color: var(--muted); cursor: pointer; transition: color 160ms ease, transform 160ms ease; }
 .filter-command:hover,
@@ -449,7 +478,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-category,
   .project-state { display: none; }
   .project-details { line-height: 1.6; }
-  .print-hero { margin-bottom: 2rem; }
+  .print-project-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .print-visual-label-bottom { display: none; }
+  .print-copy h1 { font-size: clamp(2.25rem, 12vw, 3.2rem); }
+  .print-overview { line-height: 1.7; }
+  .print-features { margin-top: 4rem; }
   .homelab-hosts li { grid-template-columns: 1fr; gap: 0.2rem; }
   .service-groups { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
   .system-bar { display: none; }

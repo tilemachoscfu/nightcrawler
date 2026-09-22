@@ -26,7 +26,7 @@ export const projects: readonly ProjectEntry[] = [
     description: "modular printed rack for homelab hardware",
     category: "print",
     status: "complete",
-    details: ["modular rack", "printed panels", "hardware mounted"],
+    details: ["10-inch format", "modular frame", "200 mm depth"],
     links: [{ label: "printables", href: "https://www.printables.com/model/1225275-modular-10-server-rack-mod10" }],
   },
   {
