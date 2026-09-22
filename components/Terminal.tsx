@@ -40,21 +40,28 @@ export function Terminal() {
       </header>
 
       <div className="home-content">
-        <p className="boot-line intro-reveal intro-name" aria-live="polite">
-          <span className="text-[var(--muted)]">running:</span>{" "}
-          <span key={statusIndex} className="status-copy">{statusLines[statusIndex]}</span>
-          <span className="terminal-cursor" aria-hidden="true" />
-        </p>
+        <section className="home-hero" aria-labelledby="home-title">
+          <p className="home-breadcrumb intro-reveal"><span>~</span><span>/</span><span>home</span></p>
 
-        <h1 className="sr-only">NIGHTCRAWLER</h1>
-        <pre className="ascii-logo intro-reveal intro-role" aria-hidden="true">{asciiLogo}</pre>
-        <div className="mobile-wordmark intro-reveal intro-role" aria-hidden="true">NIGHT<br />CRAWLER</div>
+          <p className="boot-line intro-reveal intro-name" aria-live="polite">
+            <span className="status-dot" aria-hidden="true" />
+            <span key={statusIndex} className="status-copy">{statusLines[statusIndex]}</span>
+            <span className="terminal-cursor" aria-hidden="true" />
+          </p>
 
-        <p className="identity-line intro-reveal menu-entry">
-          {"// software, infrastructure, hardware and unnecessary experiments"}
-        </p>
+          <h1 id="home-title" className="sr-only">NIGHTCRAWLER</h1>
+          <pre className="ascii-logo intro-reveal intro-role" aria-hidden="true">{asciiLogo}</pre>
+          <div className="mobile-wordmark intro-reveal intro-role" aria-hidden="true">
+            <span data-word="NIGHT">NIGHT</span>
+            <span data-word="CRAWLER">CRAWLER</span>
+          </div>
 
-        <TerminalMenu onCommand={setPendingCommand} />
+          <p className="identity-line intro-reveal menu-entry">
+            {"// building software, infrastructure and physical systems"}
+          </p>
+
+          <TerminalMenu onCommand={setPendingCommand} />
+        </section>
 
         <section className="home-directory" aria-labelledby="selected-projects">
           <div className="directory-heading">

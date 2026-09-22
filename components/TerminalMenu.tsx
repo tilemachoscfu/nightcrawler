@@ -5,11 +5,11 @@ import { useRouter } from "next/navigation";
 import { useRef, useState, type KeyboardEvent, type MouseEvent } from "react";
 
 export const terminalMenuItems = [
-  { label: "projects", href: "/projects" },
-  { label: "3d-printing", href: "/3d-printing" },
-  { label: "homelab", href: "/homelab" },
-  { label: "code", href: "/code" },
-  { label: "about", href: "/about" },
+  { label: "Projects", href: "/projects", glyph: "[]" },
+  { label: "3D Printing", href: "/3d-printing", glyph: "3D" },
+  { label: "Homelab", href: "/homelab", glyph: "::" },
+  { label: "Code", href: "/code", glyph: "{}" },
+  { label: "About", href: "/about", glyph: "@" },
 ] as const;
 
 export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => void }) {
@@ -59,6 +59,7 @@ export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => v
               >
                 &gt;
               </span>
+              <span className="menu-glyph" aria-hidden="true">{item.glyph}</span>
               {item.label}
             </Link>
           </li>
