@@ -27,6 +27,7 @@ export const projects: readonly ProjectEntry[] = [
     category: "print",
     status: "complete",
     details: ["modular rack", "printed panels", "hardware mounted"],
+    links: [{ label: "printables", href: "https://www.printables.com/model/1225275-modular-10-server-rack-mod10" }],
   },
   {
     slug: "privacy-center",

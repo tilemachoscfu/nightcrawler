@@ -16,6 +16,7 @@ export default function PrintingPage() {
           width={1200}
           height={1600}
           sizes="(max-width: 640px) calc(100vw - 2rem), 44rem"
+          unoptimized
         />
         <figcaption>01 / PHYSICAL BUILD</figcaption>
       </figure>

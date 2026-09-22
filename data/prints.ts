@@ -23,5 +23,6 @@ export const printProjects: readonly PrintProject[] = [
     status: "complete",
     details: ["modular rack", "printed panels", "hardware mounted"],
     imageUrls: ["/images/3d-printed-homelab.jpg"],
+    links: [{ label: "printables", href: "https://www.printables.com/model/1225275-modular-10-server-rack-mod10" }],
   },
 ] as const;
