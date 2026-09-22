@@ -41,8 +41,8 @@ export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => v
   }
 
   return (
-    <nav aria-label="Primary" className="mt-14">
-      <ul onKeyDown={handleKeyDown} className="space-y-1">
+    <nav aria-label="Primary" className="command-nav">
+      <ul onKeyDown={handleKeyDown} className="flex flex-wrap gap-x-5 gap-y-2">
         {terminalMenuItems.map((item, index) => (
           <li key={item.href} className="menu-entry intro-reveal">
             <Link
@@ -51,11 +51,11 @@ export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => v
               onClick={(event) => navigate(event, item.href)}
               onFocus={() => setActiveIndex(index)}
               aria-current={activeIndex === index ? "true" : undefined}
-              className="terminal-link group inline-flex min-h-8 items-center py-0.5 text-[var(--muted)]"
+              className="terminal-link group inline-flex min-h-9 items-center py-1 text-[var(--muted-bright)]"
             >
               <span
                 aria-hidden="true"
-                className={`mr-3 inline-block w-[1ch] text-[var(--foreground)] transition-opacity duration-150 ${activeIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-focus:opacity-100"}`}
+                className={`mr-2 inline-block w-[1ch] text-[var(--foreground)] transition-opacity duration-150 ${activeIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-focus:opacity-100"}`}
               >
                 &gt;
               </span>

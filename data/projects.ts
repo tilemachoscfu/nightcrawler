@@ -14,6 +14,7 @@ export const projects: readonly ProjectEntry[] = [
   { slug: "6u-rack", name: "6U-RACK", description: "modular 3D printed server rack", category: "print", status: "prototype" },
   { slug: "network-tools", name: "NETWORK-TOOLS", description: "network monitoring and utilities", category: "code", status: "active" },
   { slug: "automation", name: "AUTOMATION", description: "scripts and internal tools", category: "code", status: "active" },
+  { slug: "hardware-bench", name: "HARDWARE-BENCH", description: "small systems and component builds", category: "hardware", status: "prototype" },
   { slug: "experiments", name: "EXPERIMENTS", description: "experimental interfaces and systems", category: "experiment", status: "prototype" },
 ] as const;
 

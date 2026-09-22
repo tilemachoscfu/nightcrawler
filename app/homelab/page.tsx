@@ -13,7 +13,7 @@ export default function HomelabPage() {
         <TerminalGroup title="HOSTS" items={hosts} />
         <TerminalGroup title="SERVICES" items={services} />
       </div>
-      <p className="mt-12 text-xs text-[#555553]">demo inventory / replace in app/homelab/page.tsx</p>
+      <p className="mt-12 text-xs text-[#555553]">inventory: demo / editable</p>
     </SectionShell>
   );
 }
