@@ -7,9 +7,9 @@ import { TerminalMenu } from "./TerminalMenu";
 import { TerminalPrompt } from "./TerminalPrompt";
 
 const statusLines = [
-  "building physical systems",
-  "maintaining home infrastructure",
-  "shipping small useful tools",
+  "backend dev",
+  "network",
+  "software developer",
 ] as const;
 
 const asciiLogo = String.raw`  _   _ ___ ____ _   _ _____ ____ ____      ___        ___     _____ ____
