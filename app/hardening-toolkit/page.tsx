@@ -27,6 +27,14 @@ export default function HardeningToolkitPage() {
             <span>SCOPE / HOST + CONTAINERS</span>
             <span>STATUS / ACTIVE</span>
           </div>
+          <a
+            className="hardening-repo-link"
+            href="https://github.com/tilemachoscfu/hardening-toolkit"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span aria-hidden="true">↗</span> view source on github
+          </a>
         </header>
 
         <section className="hardening-section" aria-labelledby="safe-workflow">

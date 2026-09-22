@@ -93,6 +93,9 @@ export const codeProjects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Shell", "Python", "Linux"],
-    links: [{ label: "details", href: "/hardening-toolkit" }],
+    links: [
+      { label: "details", href: "/hardening-toolkit" },
+      { label: "github", href: "https://github.com/tilemachoscfu/hardening-toolkit" },
+    ],
   },
 ] as const;
