@@ -540,6 +540,45 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .storage-stack li { padding: 0.42rem 0.55rem; border: 1px solid var(--line); color: var(--muted-bright); font-size: 0.75rem; }
 .storage-public-note { margin-top: 4rem; color: #555053; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
 
+.hardening-project { max-width: 64rem; }
+.hardening-intro { max-width: 50rem; }
+.hardening-kicker { display: flex; align-items: center; color: var(--accent-soft); font-size: 0.75rem; letter-spacing: 0.1em; }
+.hardening-kicker i { width: 0.45rem; height: 0.45rem; margin-right: 0.55rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0.65rem rgba(255, 10, 100, 0.7); animation: signal-blink 1.4s steps(2, end) infinite; }
+.hardening-intro h1 { margin-top: 1.25rem; color: var(--foreground); font-size: clamp(2.7rem, 8vw, 6.2rem); font-weight: 750; line-height: 0.86; letter-spacing: -0.075em; }
+.hardening-intro > p:not(.hardening-kicker) { margin-top: 2rem; color: var(--muted-bright); font-size: 1rem; line-height: 1.75; }
+.hardening-status-line { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.5rem; }
+.hardening-status-line span { padding: 0.4rem 0.55rem; border: 1px solid var(--line); color: #766b70; font-size: 0.6875rem; letter-spacing: 0.06em; }
+.hardening-section { margin-top: clamp(4rem, 9vw, 7rem); }
+.hardening-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: #665d61; font-size: 0.75rem; letter-spacing: 0.1em; }
+.hardening-section-heading span { color: #4e484a; letter-spacing: 0.04em; }
+.hardening-workflow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid var(--line); }
+.hardening-workflow li { position: relative; min-height: 7.5rem; padding: 1rem; border-right: 1px solid var(--line); }
+.hardening-workflow li:last-child { border-right: 0; }
+.hardening-workflow li > span { color: var(--accent); font-size: 0.6875rem; }
+.hardening-workflow li p { margin-top: 1.3rem; color: var(--muted-bright); font-size: 0.8125rem; line-height: 1.45; text-transform: uppercase; }
+.hardening-workflow li i { position: absolute; top: 50%; right: -0.45rem; z-index: 1; padding: 0 0.15rem; background: var(--background); color: var(--accent); font-style: normal; transform: translateY(-50%); }
+.hardening-modules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.hardening-modules > li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; padding: 1.2rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.hardening-modules > li > span { color: var(--accent); font-size: 0.6875rem; }
+.hardening-modules div > p:first-child { color: var(--foreground); font-size: 0.875rem; letter-spacing: 0.035em; }
+.hardening-modules code { display: block; margin-top: 0.55rem; color: var(--accent-soft); font-family: inherit; font-size: 0.75rem; }
+.hardening-modules div > p:last-child { margin-top: 0.65rem; color: var(--muted); font-size: 0.8125rem; line-height: 1.55; }
+.hardening-rollback { display: grid; grid-template-columns: minmax(12rem, 0.65fr) minmax(0, 1.35fr); gap: 2rem; margin-top: clamp(4rem, 9vw, 7rem); padding: 1.5rem; border: 1px solid #3a1d2a; background: #090609; }
+.hardening-rollback > div p { color: var(--accent); font-size: 0.6875rem; letter-spacing: 0.1em; }
+.hardening-rollback h2 { margin-top: 0.65rem; color: var(--foreground); font-size: 1rem; letter-spacing: 0.04em; }
+.hardening-rollback ul { border-top: 1px solid var(--line); }
+.hardening-rollback li { display: flex; gap: 0.65rem; padding: 0.65rem 0; border-bottom: 1px solid var(--line); color: var(--muted-bright); font-size: 0.8125rem; line-height: 1.5; }
+.hardening-rollback li i { flex: 0 0 auto; width: 0.4rem; height: 0.4rem; margin-top: 0.4rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0.5rem rgba(255, 10, 100, 0.55); }
+.hardening-checks { border-top: 1px solid var(--line); }
+.hardening-checks > div { display: grid; grid-template-columns: 9rem minmax(0, 1fr) 5rem; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
+.hardening-checks dt { color: var(--accent-soft); font-size: 0.8125rem; }
+.hardening-checks dd { color: var(--muted-bright); font-size: 0.8125rem; }
+.hardening-checks > div > span { color: #766b70; font-size: 0.6875rem; text-align: right; text-transform: uppercase; }
+.hardening-checks > div > span i { display: inline-block; width: 0.38rem; height: 0.38rem; margin-right: 0.4rem; border-radius: 50%; background: var(--accent); }
+.hardening-stack { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.hardening-stack li { padding: 0.42rem 0.55rem; border: 1px solid var(--line); color: var(--muted-bright); font-size: 0.75rem; }
+.hardening-public-note { margin-top: 4rem; color: #555053; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
 .system-meta {
   margin-top: auto;
   padding-top: 4rem;
@@ -609,6 +648,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .storage-systems { grid-template-columns: 1fr; }
   .storage-guard { grid-template-columns: 1fr; gap: 1rem; }
   .storage-grid { grid-template-columns: 1fr; gap: 0; }
+  .hardening-intro h1 { font-size: clamp(2.6rem, 14vw, 4.2rem); }
+  .hardening-workflow { grid-template-columns: 1fr; }
+  .hardening-workflow li { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .hardening-workflow li:last-child { border-bottom: 0; }
+  .hardening-workflow li p { margin-top: 0.65rem; }
+  .hardening-workflow li i { top: auto; right: 1rem; bottom: -0.7rem; transform: rotate(90deg); }
+  .hardening-modules { grid-template-columns: 1fr; }
+  .hardening-rollback { grid-template-columns: 1fr; gap: 1.25rem; }
+  .hardening-checks > div { grid-template-columns: 1fr; gap: 0.35rem; }
+  .hardening-checks > div > span { text-align: left; }
   .system-bar { display: none; }
   .home-content { padding-top: clamp(4.5rem, 12vh, 7rem); }
   .home-breadcrumb { font-size: 0.8125rem; }
