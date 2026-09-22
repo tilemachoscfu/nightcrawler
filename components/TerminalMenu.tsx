@@ -49,8 +49,14 @@ export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => v
               <span className="menu-index" aria-hidden="true">{item.index}</span>
               <span className="menu-glyph" aria-hidden="true">{item.glyph}</span>
               <span className="menu-copy">
-                <span className="menu-label">{item.label}</span>
+                <span className="menu-heading">
+                  <span className="menu-label">{item.label}</span>
+                  <span className="menu-path">~{item.href}</span>
+                </span>
                 <span className="menu-description">{item.description}</span>
+                <span className="menu-details" aria-label={`${item.label} includes ${item.details.join(", ")}`}>
+                  {item.details.map((detail) => <span key={detail}>{detail}</span>)}
+                </span>
               </span>
               <span className="menu-meta">
                 {item.status ? <span className="signal-dot" aria-hidden="true" /> : null}

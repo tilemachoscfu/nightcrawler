@@ -8,6 +8,7 @@ export interface NavigationItem {
   href: string;
   glyph: string;
   description: string;
+  details: readonly string[];
   meta: string;
   status?: "online";
 }
@@ -20,6 +21,7 @@ export const navigationItems: readonly NavigationItem[] = [
     href: "/projects",
     glyph: "[]",
     description: "selected builds & experiments",
+    details: ["homelab", "hardware", "experiments"],
     meta: `${String(projects.length).padStart(2, "0")} entries`,
   },
   {
@@ -29,6 +31,7 @@ export const navigationItems: readonly NavigationItem[] = [
     href: "/3d-printing",
     glyph: "3D",
     description: "racks, mounts & physical systems",
+    details: ["6u rack", "mounts", "cable systems"],
     meta: `${String(printProjects.length).padStart(2, "0")} models`,
   },
   {
@@ -38,7 +41,8 @@ export const navigationItems: readonly NavigationItem[] = [
     href: "/homelab",
     glyph: "::",
     description: "hosts, services & infrastructure",
-    meta: "02 hosts",
+    details: ["docker", "monitoring", "self-hosted"],
+    meta: "02 hosts / 07 services",
     status: "online",
   },
   {
@@ -48,6 +52,7 @@ export const navigationItems: readonly NavigationItem[] = [
     href: "/code",
     glyph: "{}",
     description: "utilities, automation & network tools",
+    details: ["networking", "automation", "utilities"],
     meta: `${String(codeProjects.length).padStart(2, "0")} projects`,
   },
   {
@@ -57,6 +62,7 @@ export const navigationItems: readonly NavigationItem[] = [
     href: "/about",
     glyph: "@",
     description: "identity, focus & location",
-    meta: "athens / gr",
+    details: ["athens", "github", "instagram"],
+    meta: "02 profiles",
   },
 ] as const;
