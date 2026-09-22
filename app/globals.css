@@ -10,6 +10,9 @@
   --accent: #ff0a64;
   --accent-soft: #ff9abd;
   --accent-dark: #4e0a25;
+  --cyber-green: #8dff24;
+  --cyber-green-soft: #d7ff9a;
+  --cyber-green-dark: #173d08;
 }
 
 @theme inline {
@@ -118,9 +121,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: relative;
   z-index: 1;
   display: block;
-  color: #fff0f5;
-  -webkit-text-stroke: 1px var(--accent-soft);
-  text-shadow: 2px 2px 0 #ff5c94, 5px 5px 0 var(--accent-dark), 0 0 1.8rem rgba(255, 10, 100, 0.28);
+  color: var(--cyber-green);
+  -webkit-text-stroke: 1px var(--cyber-green-soft);
+  text-shadow: 2px 2px 0 #45e912, 5px 5px 0 var(--cyber-green-dark), 0 0 1.8rem rgba(126, 255, 29, 0.3);
 }
 
 .stacked-wordmark span::before {
@@ -130,7 +133,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   z-index: -1;
   translate: 4px 4px;
   color: transparent;
-  -webkit-text-stroke: 1px var(--accent);
+  -webkit-text-stroke: 1px #58ff18;
 }
 
 .home-brand-lockup {
@@ -720,7 +723,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     text-align: left;
   }
   .stacked-wordmark span {
-    text-shadow: 2px 2px 0 #ff5c94, 4px 4px 0 var(--accent-dark), 0 0 1.35rem rgba(255, 10, 100, 0.26);
+    text-shadow: 2px 2px 0 #45e912, 4px 4px 0 var(--cyber-green-dark), 0 0 1.35rem rgba(126, 255, 29, 0.28);
   }
   .home-brand-lockup { width: calc(100vw - 2rem); margin-top: clamp(2.75rem, 9vh, 3.75rem); }
   .home-brand-lockup .stacked-wordmark { margin-top: 0; }
