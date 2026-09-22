@@ -50,7 +50,7 @@ export const projects: readonly ProjectEntry[] = [
     description: "media library and storage integration tooling",
     category: "code",
     status: "active",
-    details: ["Python", "Arr stack", "media services"],
+    details: ["Python", "Gluetun / AirVPN", "media services"],
     links: [{ label: "details", href: "/storage-automation" }],
   },
 ] as const;
@@ -83,7 +83,7 @@ export const codeProjects: readonly ProjectEntry[] = [
     description: "media storage migration and service integration",
     category: "code",
     status: "active",
-    details: ["Python", "Arr stack", "Jellyfin"],
+    details: ["Python", "Gluetun / AirVPN", "Jellyfin"],
     links: [{ label: "details", href: "/storage-automation" }],
   },
   {

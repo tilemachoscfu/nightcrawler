@@ -25,6 +25,7 @@ export default function StorageAutomationPage() {
           <div className="storage-status-line">
             <span>VOLUME / 2 TB</span>
             <span>FILESYSTEM / EXT4</span>
+            <span>VPN / GLUETUN + AIRVPN</span>
             <span>MODE / FAIL-CLOSED</span>
           </div>
         </header>
@@ -51,7 +52,7 @@ export default function StorageAutomationPage() {
         <section className="storage-section" aria-labelledby="systems">
           <div className="storage-section-heading">
             <h2 id="systems">CONNECTED SYSTEMS</h2>
-            <span>10 services</span>
+            <span>12 services</span>
           </div>
           <div className="storage-systems">
             {storageSystems.map((group) => (

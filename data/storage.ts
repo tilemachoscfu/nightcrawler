@@ -14,15 +14,17 @@ export const storageOverview =
 export const storageFlows: readonly StorageFlow[] = [
   { label: "VIDEO", nodes: ["Jellyseerr", "Sonarr / Radarr", "qBittorrent", "dedicated storage", "Jellyfin"] },
   { label: "MUSIC", nodes: ["Lidarr", "Soularr / slskd", "dedicated storage", "Navidrome"] },
+  { label: "NETWORK", nodes: ["qBittorrent / slskd", "Gluetun", "AirVPN", "external network"] },
   { label: "STARTUP", nodes: ["container start", "mount guard", "volume marker", "service entrypoint"] },
 ] as const;
 
 export const storageSystems = [
-  { title: "ACQUISITION", items: ["qBittorrent", "Sonarr", "Radarr", "Lidarr", "slskd", "Soularr"] },
+  { title: "ACQUISITION", items: ["qBittorrent", "Sonarr", "Radarr", "Lidarr", "slskd", "Soularr", "Gluetun", "AirVPN"] },
   { title: "LIBRARIES", items: ["Jellyfin", "Navidrome", "Jellyseerr", "Bazarr"] },
 ] as const;
 
 export const storageGuarantees = [
+  "Download traffic is isolated inside the Gluetun network namespace and routed through AirVPN",
   "Existing torrent locations and media-library roots remain unchanged",
   "New content can use the dedicated storage without forcing a bulk migration",
   "Hardlinks are verified inside the relevant containers on the same filesystem",
@@ -47,6 +49,8 @@ export const storageStack = [
   "ext4",
   "Arr stack",
   "qBittorrent",
+  "Gluetun",
+  "AirVPN",
   "Jellyfin",
   "Navidrome",
 ] as const;
