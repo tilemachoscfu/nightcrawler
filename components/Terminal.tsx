@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { TerminalMenu } from "./TerminalMenu";
 import { TerminalPrompt } from "./TerminalPrompt";
@@ -41,7 +42,29 @@ export function Terminal() {
             <span data-word="CRAWLER">CRAWLER</span>
           </div>
 
-          <p className="identity-line intro-reveal menu-entry">
+          <figure className="home-art intro-reveal intro-art">
+            <div className="home-art-media">
+              <Image
+                src="/images/nightcrawler-amiga-demo.jpg"
+                alt="Pixel-art skeleton wearing a virtual-reality visor and holding an Amiga Demo floppy disk"
+                width={736}
+                height={541}
+                sizes="(max-width: 640px) calc(100vw - 2.5rem), 31rem"
+                priority
+                unoptimized
+              />
+              <span className="home-art-tint" aria-hidden="true" />
+              <span className="home-art-label"><i /> SIGNAL_01 / ONLINE</span>
+            </div>
+            <figcaption>
+              <span>visual reference / amiga demo</span>
+              <a href="https://pin.it/3KgzY46xz" target="_blank" rel="noreferrer">
+                source ↗
+              </a>
+            </figcaption>
+          </figure>
+
+          <p className="identity-line intro-reveal intro-tagline">
             {"// building software, infrastructure and physical systems"}
           </p>
 
