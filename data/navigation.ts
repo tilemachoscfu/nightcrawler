@@ -31,7 +31,7 @@ export const navigationItems: readonly NavigationItem[] = [
     href: "/3d-printing",
     glyph: "3D",
     description: "racks, mounts & physical systems",
-    details: ["6u rack", "mounts", "cable systems"],
+    details: ["functional parts", "parametric models", "FDM"],
     meta: `${String(printProjects.length).padStart(2, "0")} models`,
   },
   {
@@ -42,7 +42,7 @@ export const navigationItems: readonly NavigationItem[] = [
     glyph: "::",
     description: "hosts, services & infrastructure",
     details: ["docker", "monitoring", "self-hosted"],
-    meta: "02 hosts / 07 services",
+    meta: "02 hosts / 04 groups",
     status: "online",
   },
   {

@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import type { ProjectEntry } from "@/data/projects";
 import { ProjectList } from "./ProjectList";
 
-const filters = ["all", "homelab", "print", "code", "hardware", "experiment"] as const;
+const filters = ["all", "homelab", "print", "code"] as const;
 type Filter = (typeof filters)[number];
 
 export function FilteredProjectList({ items }: { items: readonly ProjectEntry[] }) {

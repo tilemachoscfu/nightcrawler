@@ -360,6 +360,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-row:last-child { border-bottom: 1px solid var(--line); }
 .project-number { color: var(--muted); }
 .project-description { margin-top: 0.15rem; color: var(--muted); font-size: 0.875rem; }
+.project-details { margin-top: 0.45rem; color: #666663; font-size: 0.6875rem; text-transform: uppercase; }
+.project-links { display: flex; gap: 0.75rem; margin-top: 0.55rem; color: var(--accent-soft); font-size: 0.75rem; }
+.project-links a { transition: color 160ms ease, transform 160ms ease; }
+.project-links a:hover,
+.project-links a:focus-visible { color: var(--foreground); transform: translateX(2px); }
 .project-category,
 .project-state { align-self: center; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; }
 .project-state { text-align: right; color: var(--muted-bright); }
@@ -391,6 +396,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .filter-command:focus-visible { color: var(--foreground); transform: translateX(2px); }
 .filter-command[data-active="true"] { color: var(--accent-soft); transform: translateX(2px); }
 .filter-result { margin-top: 2rem; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; }
+
+.homelab-hosts { border-top: 1px solid var(--line); }
+.homelab-hosts li { display: grid; grid-template-columns: 7rem minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.homelab-hosts li p:not(:first-child) { color: var(--muted); font-size: 0.8125rem; }
+.service-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 4rem; }
+.service-groups h3 { margin-bottom: 0.75rem; color: #666663; font-size: 0.6875rem; letter-spacing: 0.1em; }
+.service-groups li { padding: 0.08rem 0; color: var(--muted-bright); font-size: 0.875rem; }
 
 .system-meta {
   margin-top: auto;
@@ -431,6 +443,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .terminal-prompt { font-size: 0.8125rem; }
   .system-meta { align-items: flex-start; flex-direction: column; gap: 0.2rem; }
   .project-row { grid-template-columns: 2.3rem minmax(0, 1fr); gap: 0.6rem; }
+  .project-category,
+  .project-state { display: none; }
+  .project-details { line-height: 1.6; }
+  .homelab-hosts li { grid-template-columns: 1fr; gap: 0.2rem; }
+  .service-groups { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
   .system-bar { display: none; }
   .home-content { padding-top: clamp(4.5rem, 12vh, 7rem); }
   .home-breadcrumb { font-size: 0.8125rem; }
