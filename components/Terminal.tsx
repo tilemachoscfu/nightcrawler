@@ -7,9 +7,9 @@ import { TerminalMenu } from "./TerminalMenu";
 import { TerminalPrompt } from "./TerminalPrompt";
 
 const statusLines = [
-  "backend dev",
-  "network",
-  "software developer",
+  "backend engineering",
+  "network infrastructure",
+  "software development",
 ] as const;
 
 const asciiLogo = String.raw`  _   _ ___ ____ _   _ _____ ____ ____      ___        ___     _____ ____
