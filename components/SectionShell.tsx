@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { PageTransition } from "./PageTransition";
 import { TerminalCursor } from "./TerminalCursor";
 import { TerminalPrompt } from "./TerminalPrompt";
+import { SocialLinks } from "./SocialLinks";
 import { navigationItems } from "@/data/navigation";
 
 export function SectionShell({ path, children }: { path: string; children: ReactNode }) {
@@ -30,6 +31,7 @@ export function SectionShell({ path, children }: { path: string; children: React
       </PageTransition>
       <footer className="site-footer">
         <Link href="/" className="terminal-link hover:text-[var(--foreground)] focus:text-[var(--foreground)]">cd ~</Link>
+        <SocialLinks compact />
         <span>nightcrawler / {path}</span>
       </footer>
     </main>
