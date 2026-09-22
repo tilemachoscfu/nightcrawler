@@ -45,8 +45,8 @@ export function Terminal() {
 
             <div className="home-art intro-reveal intro-art">
               <Image
-                src="/images/nightcrawler-amiga-demo.jpg"
-                alt="Pixel-art skeleton wearing a virtual-reality visor and holding an Amiga Demo floppy disk"
+                src="/images/nightcrawler-demo.png"
+                alt="Pixel-art skeleton wearing a virtual-reality visor and holding a Nightcrawler Demo floppy disk"
                 width={736}
                 height={541}
                 sizes="(max-width: 640px) calc(100vw - 2.5rem), 31rem"
