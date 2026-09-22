@@ -18,7 +18,10 @@ export const projects: readonly ProjectEntry[] = [
     category: "homelab",
     status: "active",
     details: ["Linux", "Docker Compose", "monitoring"],
-    links: [{ label: "github", href: "https://github.com/tilemachoscfu/homelab-infrastructure" }],
+    links: [
+      { label: "details", href: "/homelab" },
+      { label: "github", href: "https://github.com/tilemachoscfu/homelab-infrastructure" },
+    ],
   },
   {
     slug: "3d-printed-homelab",

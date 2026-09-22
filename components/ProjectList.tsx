@@ -13,7 +13,14 @@ export function ProjectList({ items }: { items: readonly ProjectEntry[] }) {
             {item.links?.length ? (
               <p className="project-links">
                 {item.links.map((link) => (
-                  <a key={link.href} href={link.href} target="_blank" rel="noreferrer">[{link.label}]</a>
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target={link.href.startsWith("/") ? undefined : "_blank"}
+                    rel={link.href.startsWith("/") ? undefined : "noreferrer"}
+                  >
+                    [{link.label}]
+                  </a>
                 ))}
               </p>
             ) : null}
