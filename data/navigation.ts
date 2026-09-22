@@ -30,8 +30,8 @@ export const navigationItems: readonly NavigationItem[] = [
     shortLabel: "prints",
     href: "/3d-printing",
     glyph: "3D",
-    description: "racks, mounts & physical systems",
-    details: ["functional parts", "parametric models", "FDM"],
+    description: "printed homelab hardware",
+    details: ["modular rack", "physical build", "FDM"],
     meta: `${String(printProjects.length).padStart(2, "0")} models`,
   },
   {

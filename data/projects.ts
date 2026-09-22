@@ -21,20 +21,12 @@ export const projects: readonly ProjectEntry[] = [
     links: [{ label: "github", href: "https://github.com/tilemachoscfu/homelab-infrastructure" }],
   },
   {
-    slug: "i8-dock-02",
-    name: "I8 / DOCK-02",
-    description: "parametric 2U iPhone 8 rack cradle",
+    slug: "3d-printed-homelab",
+    name: "3D PRINTED HOMELAB",
+    description: "modular printed rack for homelab hardware",
     category: "print",
-    status: "prototype",
-    details: ["CadQuery", "PETG", "support-free"],
-  },
-  {
-    slug: "measuring-jug",
-    name: "MEASURING JUG",
-    description: "parametric 295 ml FDM vessel",
-    category: "print",
-    status: "prototype",
-    details: ["one-piece", "PLA / PETG", "0.20 mm"],
+    status: "complete",
+    details: ["modular rack", "printed panels", "hardware mounted"],
   },
   {
     slug: "privacy-center",
@@ -51,14 +43,6 @@ export const projects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Python", "Arr stack", "media services"],
-  },
-  {
-    slug: "printable-dragon",
-    name: "PRINTABLE DRAGON",
-    description: "procedural 120 mm printable model",
-    category: "print",
-    status: "prototype",
-    details: ["Python", "STL", "120 mm"],
   },
 ] as const;
 
