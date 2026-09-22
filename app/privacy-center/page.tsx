@@ -27,6 +27,14 @@ export default function PrivacyCenterPage() {
             <span>STORAGE / LOCAL</span>
             <span>STATUS / ACTIVE</span>
           </div>
+          <a
+            className="privacy-repo-link"
+            href="https://github.com/tilemachoscfu/privacy-center"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>&gt;</span> github / privacy-center ↗
+          </a>
         </header>
 
         <section className="privacy-section" aria-labelledby="capabilities">

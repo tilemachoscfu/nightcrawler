@@ -436,10 +436,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .homelab-hosts li > p:first-child i { width: 0.45rem; height: 0.45rem; margin-right: 0.55rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0.65rem rgba(255, 10, 100, 0.7); animation: signal-blink 1.4s steps(2, end) infinite; }
 .homelab-intro h1 { margin-top: 1.25rem; color: var(--foreground); font-size: clamp(2.4rem, 7vw, 5.6rem); font-weight: 750; line-height: 0.88; letter-spacing: -0.07em; }
 .homelab-intro > p:not(.homelab-kicker) { margin-top: 2rem; color: var(--muted-bright); font-size: 1rem; line-height: 1.75; }
-.homelab-repo-link { display: inline-flex; gap: 0.65rem; margin-top: 1.4rem; color: var(--accent-soft); font-size: 0.8125rem; transition: color 160ms ease, transform 160ms ease; }
-.homelab-repo-link span { color: var(--accent); }
+.homelab-repo-link,
+.privacy-repo-link { display: inline-flex; gap: 0.65rem; margin-top: 1.4rem; color: var(--accent-soft); font-size: 0.8125rem; transition: color 160ms ease, transform 160ms ease; }
+.homelab-repo-link span,
+.privacy-repo-link span { color: var(--accent); }
 .homelab-repo-link:hover,
-.homelab-repo-link:focus-visible { color: var(--foreground); transform: translateX(3px); }
+.homelab-repo-link:focus-visible,
+.privacy-repo-link:hover,
+.privacy-repo-link:focus-visible { color: var(--foreground); transform: translateX(3px); }
 .homelab-section { margin-top: clamp(4rem, 9vw, 7rem); }
 .homelab-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: #665d61; font-size: 0.75rem; letter-spacing: 0.1em; }
 .homelab-section-heading span { color: #4e484a; letter-spacing: 0.04em; }
