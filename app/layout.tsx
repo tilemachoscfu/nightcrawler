@@ -14,7 +14,13 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 
-export const viewport: Viewport = { colorScheme: "dark", themeColor: "#090909" };
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  colorScheme: "dark",
+  themeColor: "#060506",
+};
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
