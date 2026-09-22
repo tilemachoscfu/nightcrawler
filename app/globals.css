@@ -464,6 +464,38 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .homelab-stack li { padding: 0.45rem 0.65rem; border: 1px solid var(--line); color: var(--muted-bright); font-size: 0.75rem; }
 .homelab-public-note { margin-top: 4rem; color: #555053; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
 
+.privacy-project { max-width: 64rem; }
+.privacy-intro { max-width: 50rem; }
+.privacy-kicker { display: flex; align-items: center; color: var(--accent-soft); font-size: 0.75rem; letter-spacing: 0.1em; }
+.privacy-kicker i { width: 0.45rem; height: 0.45rem; margin-right: 0.55rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0.65rem rgba(255, 10, 100, 0.7); animation: signal-blink 1.4s steps(2, end) infinite; }
+.privacy-intro h1 { margin-top: 1.25rem; color: var(--foreground); font-size: clamp(2.7rem, 8vw, 6.2rem); font-weight: 750; line-height: 0.86; letter-spacing: -0.075em; }
+.privacy-intro > p:not(.privacy-kicker) { margin-top: 2rem; color: var(--muted-bright); font-size: 1rem; line-height: 1.75; }
+.privacy-status-line { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.5rem; }
+.privacy-status-line span { padding: 0.4rem 0.55rem; border: 1px solid var(--line); color: #766b70; font-size: 0.6875rem; letter-spacing: 0.06em; }
+.privacy-section { margin-top: clamp(4rem, 9vw, 7rem); }
+.privacy-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: #665d61; font-size: 0.75rem; letter-spacing: 0.1em; }
+.privacy-section-heading span { color: #4e484a; letter-spacing: 0.04em; }
+.privacy-capabilities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.privacy-capabilities > li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; padding: 1.2rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.privacy-capabilities > li > span { color: var(--accent); font-size: 0.6875rem; }
+.privacy-capabilities div > p:first-child { color: var(--foreground); font-size: 0.875rem; letter-spacing: 0.035em; }
+.privacy-capabilities code { display: block; margin-top: 0.55rem; color: var(--accent-soft); font-family: inherit; font-size: 0.75rem; }
+.privacy-capabilities div > p:last-child { margin-top: 0.65rem; color: var(--muted); font-size: 0.8125rem; line-height: 1.55; }
+.privacy-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid var(--line); }
+.privacy-flow li { position: relative; min-height: 8.5rem; padding: 1rem; border-right: 1px solid var(--line); }
+.privacy-flow li:last-child { border-right: 0; }
+.privacy-flow li > span { color: var(--accent); font-size: 0.6875rem; }
+.privacy-flow li p { margin-top: 1.5rem; color: var(--muted-bright); font-size: 0.8125rem; line-height: 1.45; }
+.privacy-flow li i { position: absolute; top: 50%; right: -0.45rem; z-index: 1; padding: 0 0.15rem; background: var(--background); color: var(--accent); font-style: normal; transform: translateY(-50%); }
+.privacy-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(15rem, 0.8fr); gap: clamp(2rem, 6vw, 5rem); }
+.privacy-guarantees ul { border-top: 1px solid var(--line); }
+.privacy-guarantees li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.75rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); color: var(--muted-bright); font-size: 0.8125rem; line-height: 1.55; }
+.privacy-guarantees li span { color: #665d61; font-size: 0.6875rem; }
+.privacy-tag-section ul { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.privacy-tag-section li { padding: 0.42rem 0.55rem; border: 1px solid var(--line); color: var(--muted-bright); font-size: 0.75rem; }
+.privacy-tag-section + .privacy-tag-section { margin-top: 3rem; }
+.privacy-public-note { margin-top: 4rem; color: #555053; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
 .system-meta {
   margin-top: auto;
   padding-top: 4rem;
@@ -518,6 +550,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .homelab-flows > li > div i { display: inline-block; width: 1rem; margin-right: 0.45rem; transform: rotate(90deg); }
   .service-groups { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
   .homelab-notes-grid { grid-template-columns: 1fr; gap: 0; }
+  .privacy-intro h1 { font-size: clamp(2.75rem, 16vw, 4.5rem); }
+  .privacy-capabilities { grid-template-columns: 1fr; }
+  .privacy-flow { grid-template-columns: 1fr; }
+  .privacy-flow li { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .privacy-flow li:last-child { border-bottom: 0; }
+  .privacy-flow li p { margin-top: 0.65rem; }
+  .privacy-flow li i { top: auto; right: 1rem; bottom: -0.7rem; transform: rotate(90deg); }
+  .privacy-grid { grid-template-columns: 1fr; gap: 0; }
   .system-bar { display: none; }
   .home-content { padding-top: clamp(4.5rem, 12vh, 7rem); }
   .home-breadcrumb { font-size: 0.8125rem; }

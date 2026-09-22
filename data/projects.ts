@@ -39,6 +39,7 @@ export const projects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Python", "local dashboard", "passive audit"],
+    links: [{ label: "details", href: "/privacy-center" }],
   },
   {
     slug: "storage-automation",
@@ -67,6 +68,7 @@ export const codeProjects: readonly ProjectEntry[] = [
     category: "code",
     status: "active",
     details: ["Python", "local-first", "passive"],
+    links: [{ label: "details", href: "/privacy-center" }],
   },
   {
     slug: "storage-automation",
