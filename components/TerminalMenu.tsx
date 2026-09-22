@@ -8,7 +8,7 @@ import { navigationItems } from "@/data/navigation";
 export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => void }) {
   const router = useRouter();
   const linksRef = useRef<Array<HTMLAnchorElement | null>>([]);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [navigating, setNavigating] = useState(false);
 
   function navigate(event: MouseEvent<HTMLAnchorElement>, href: string) {
@@ -24,9 +24,9 @@ export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => v
   function handleKeyDown(event: KeyboardEvent<HTMLUListElement>) {
     if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
     event.preventDefault();
-    let next = activeIndex;
-    if (event.key === "ArrowDown") next = (activeIndex + 1) % navigationItems.length;
-    if (event.key === "ArrowUp") next = (activeIndex - 1 + navigationItems.length) % navigationItems.length;
+    let next = activeIndex ?? 0;
+    if (event.key === "ArrowDown") next = activeIndex === null ? 0 : (activeIndex + 1) % navigationItems.length;
+    if (event.key === "ArrowUp") next = activeIndex === null ? navigationItems.length - 1 : (activeIndex - 1 + navigationItems.length) % navigationItems.length;
     if (event.key === "Home") next = 0;
     if (event.key === "End") next = navigationItems.length - 1;
     setActiveIndex(next);
@@ -46,18 +46,8 @@ export function TerminalMenu({ onCommand }: { onCommand?: (command: string) => v
               data-active={activeIndex === index}
               className="rich-menu-link group"
             >
-              <span className="menu-index" aria-hidden="true">{item.index}</span>
               <span className="menu-glyph" aria-hidden="true">{item.glyph}</span>
-              <span className="menu-copy">
-                <span className="menu-heading">
-                  <span className="menu-label">{item.label}</span>
-                  <span className="menu-path">~{item.href}</span>
-                </span>
-                <span className="menu-description">{item.description}</span>
-                <span className="menu-details" aria-label={`${item.label} includes ${item.details.join(", ")}`}>
-                  {item.details.map((detail) => <span key={detail}>{detail}</span>)}
-                </span>
-              </span>
+              <span className="menu-label">{item.label}</span>
               <span className="menu-meta">
                 {item.status ? <span className="signal-dot" aria-hidden="true" /> : null}
                 {item.meta}
