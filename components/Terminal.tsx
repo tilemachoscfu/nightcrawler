@@ -37,13 +37,13 @@ export function Terminal() {
           </p>
 
           <h1 id="home-title" className="sr-only">NIGHTCRAWLER</h1>
-          <div className="stacked-wordmark intro-reveal intro-role" aria-hidden="true">
-            <span data-word="NIGHT">NIGHT</span>
-            <span data-word="CRAWLER">CRAWLER</span>
-          </div>
+          <div className="home-brand-lockup">
+            <div className="stacked-wordmark intro-reveal intro-role" aria-hidden="true">
+              <span data-word="NIGHT">NIGHT</span>
+              <span data-word="CRAWLER">CRAWLER</span>
+            </div>
 
-          <figure className="home-art intro-reveal intro-art">
-            <div className="home-art-media">
+            <div className="home-art intro-reveal intro-art">
               <Image
                 src="/images/nightcrawler-amiga-demo.jpg"
                 alt="Pixel-art skeleton wearing a virtual-reality visor and holding an Amiga Demo floppy disk"
@@ -53,16 +53,8 @@ export function Terminal() {
                 priority
                 unoptimized
               />
-              <span className="home-art-tint" aria-hidden="true" />
-              <span className="home-art-label"><i /> SIGNAL_01 / ONLINE</span>
             </div>
-            <figcaption>
-              <span>visual reference / amiga demo</span>
-              <a href="https://pin.it/3KgzY46xz" target="_blank" rel="noreferrer">
-                source ↗
-              </a>
-            </figcaption>
-          </figure>
+          </div>
 
           <p className="identity-line intro-reveal intro-tagline">
             {"// building software, infrastructure and physical systems"}
