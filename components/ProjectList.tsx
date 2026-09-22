@@ -11,7 +11,7 @@ export function ProjectList({ items }: { items: readonly ProjectEntry[] }) {
             {item.description ? <p className="project-description">{item.description}</p> : null}
           </div>
           <span className="project-category">{item.category ?? "project"}</span>
-          <span className="project-state">{item.status ?? "—"}</span>
+          <span className="project-state" data-state={item.status ?? "unknown"}>{item.status ?? "—"}</span>
         </li>
       ))}
     </ol>

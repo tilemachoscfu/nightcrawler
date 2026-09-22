@@ -75,7 +75,7 @@ export function Terminal() {
                   <span className="index-number">{String(index + 1).padStart(2, "0")} /</span>
                   <span className="index-name">{project.name}</span>
                   <span className="index-description">{project.description}</span>
-                  <span className="index-status">{project.status ?? "active"}</span>
+                  <span className="index-status" data-state={project.status ?? "active"}>{project.status ?? "active"}</span>
                 </Link>
               </li>
             ))}
@@ -94,7 +94,7 @@ export function Terminal() {
             <dl className="readout-stats">
               <div><dt>hosts</dt><dd>02</dd></div>
               <div><dt>services</dt><dd>07</dd></div>
-              <div><dt>state</dt><dd>online</dd></div>
+              <div><dt>state</dt><dd className="online-value"><span className="signal-dot" aria-hidden="true" />online</dd></div>
             </dl>
           </section>
         </div>
