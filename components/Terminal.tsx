@@ -12,6 +12,8 @@ const statusLines = [
   "software development",
 ] as const;
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Terminal() {
   const [pendingCommand, setPendingCommand] = useState<string | null>(null);
   const [statusIndex, setStatusIndex] = useState(0);
@@ -45,7 +47,7 @@ export function Terminal() {
 
             <div className="home-art intro-reveal intro-art">
               <Image
-                src="/images/nightcrawler-demo.png"
+                src={`${basePath}/images/nightcrawler-demo.png`}
                 alt="Pixel-art skeleton wearing a virtual-reality visor and holding a Nightcrawler Demo floppy disk"
                 width={736}
                 height={541}

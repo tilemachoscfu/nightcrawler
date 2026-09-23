@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -11,7 +13,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: { default: "NIGHTCRAWLER", template: "%s / NIGHTCRAWLER" },
   description: "NIGHTCRAWLER — software development, homelab, 3D printing, hardware, and experimental projects.",
-  icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
+  icons: [{ rel: "icon", url: `${basePath}/favicon.svg`, type: "image/svg+xml" }],
 };
 
 export const viewport: Viewport = {

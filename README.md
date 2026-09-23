@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NIGHTCRAWLER
+
+Personal portfolio for software development, homelab infrastructure, 3D printing, hardware and experimental projects.
+
+Live site: [tilemachoscfu.github.io/nightcrawler](https://tilemachoscfu.github.io/nightcrawler/)
 
 ## Getting Started
 
