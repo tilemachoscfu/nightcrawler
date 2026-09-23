@@ -309,7 +309,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .footer-socials { display: flex; gap: 1.25rem; color: var(--muted); }
-.visitor-counter { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); }
+.visitor-counter { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); white-space: nowrap; }
 .visitor-counter i {
   width: 0.35rem;
   height: 0.35rem;
@@ -318,7 +318,24 @@ button, a { -webkit-tap-highlight-color: transparent; }
   box-shadow: 0 0 0.55rem rgba(141, 255, 36, 0.55);
   animation: signal-blink 1.25s ease-in-out infinite;
 }
-.visitor-counter img { width: auto; height: 1.15rem; opacity: 0.82; }
+.visitor-counter-value {
+  position: relative;
+  min-width: 3.25rem;
+  height: 1.15rem;
+  display: inline-grid;
+  place-items: center;
+  overflow: hidden;
+  color: #53604e;
+  line-height: 1;
+}
+.visitor-counter-value img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 1;
+}
 
 .about-profile { width: 100%; }
 .about-intro { max-width: 48rem; }
