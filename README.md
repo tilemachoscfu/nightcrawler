@@ -2,7 +2,7 @@
 
 Personal portfolio for software development, homelab infrastructure, 3D printing, hardware and experimental projects.
 
-Live site: [tilemachoscfu.github.io/nightcrawler](https://tilemachoscfu.github.io/nightcrawler/)
+Live site: [tilemachoscfu.github.io](https://tilemachoscfu.github.io/)
 
 ## Getting Started
 
