@@ -309,6 +309,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .footer-socials { display: flex; gap: 1.25rem; color: var(--muted); }
+.visitor-counter { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); }
+.visitor-counter i {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0.55rem rgba(141, 255, 36, 0.55);
+  animation: signal-blink 1.25s ease-in-out infinite;
+}
+.visitor-counter img { width: auto; height: 1.15rem; opacity: 0.82; }
 
 .about-profile { width: 100%; }
 .about-intro { max-width: 48rem; }
@@ -930,4 +940,5 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: none;
   }
   .about-kicker i { animation: none !important; opacity: 1; transform: none; }
+  .visitor-counter i { animation: none !important; opacity: 1; transform: none; }
 }

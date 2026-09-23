@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { TerminalMenu } from "./TerminalMenu";
 import { TerminalPrompt } from "./TerminalPrompt";
 import { SocialLinks } from "./SocialLinks";
+import { VisitorCounter } from "./VisitorCounter";
 
 const statusLines = [
   "backend engineering",
@@ -74,6 +75,7 @@ export function Terminal() {
 
       <footer className="site-footer">
         <span>build 2.0.0</span>
+        <VisitorCounter />
         <span>© NIGHTCRAWLER</span>
       </footer>
     </main>
