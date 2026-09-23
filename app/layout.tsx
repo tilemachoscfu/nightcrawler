@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -24,7 +25,7 @@ export const viewport: Viewport = {
   themeColor: "#020402",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={geistMono.variable}>
       <body>{children}</body>
