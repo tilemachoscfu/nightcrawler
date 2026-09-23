@@ -320,7 +320,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .visitor-counter-value {
   position: relative;
-  min-width: 3.25rem;
+  width: 3.6rem;
   height: 1.15rem;
   display: inline-grid;
   place-items: center;
@@ -330,10 +330,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .visitor-counter-value img {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  top: 0;
+  right: 0;
+  width: auto;
   height: 100%;
-  object-fit: fill;
+  max-width: none;
   opacity: 1;
 }
 
