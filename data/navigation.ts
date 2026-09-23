@@ -63,6 +63,6 @@ export const navigationItems: readonly NavigationItem[] = [
     glyph: "@",
     description: "identity, focus & location",
     details: ["athens", "github", "instagram"],
-    meta: "02 profiles",
+    meta: "profile / credentials",
   },
 ] as const;
